@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Selectable Towns</title>
+        <link rel="script" href="lib/jquery-3.0.0.min.js"/>
+    </head>
+    <body>
+    <style>
+        li{
+            display: inline-block;
+            padding: 20px;
+        }
+    </style>
+        <ul id="items">
+            <li>Sofia</li>
+            <li>Burgas</li>
+            <li>Plovdiv</li>
+        </ul>
+        <button id="showTownsButton">Show Towns</button>
+
+    <script>
+        $('#items li').click(function(){
+            let li = $(this);
+
+        }
+    </script>
+    <script>
+        $('#showTownsButton').click(function(){
+            let selectedLi = $('#item li[data-selected=true]');
+            let towns = selectedLi.map((i, x) => x.innerText).get().join(', ');
+            let townsDiv = $('<div>').text("Selected towns: " + towns);
+            $('<body>').append(townsDiv);
+        };
+
+    </script>
+    </body>
+</html>
