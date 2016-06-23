@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Li Element</title>
-    <link rel="script" href="lib/jquery-3.0.0.min.js"/>
+    <script src="lib/jquery-3.0.0.min.js"></script>
 </head>
 <body>
-<h1>Item lists</h1>\
+<h1>Item lists</h1>
 <ul id="items">
     <li>First</li>
     <li>Second</li>
@@ -22,11 +22,8 @@
         let li = document.createElement("li");
         li.appendChild(document.createTextNode(text));
         document.getElementById("items").appendChild(li);
-        $('li').css('background', '#ddd');
-        $('li').css('padding', '10px');
     }
-
-
+    $('li').css('background', '#ddd');
 </script>
 </body>
 </html>

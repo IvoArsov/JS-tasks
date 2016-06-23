@@ -6,13 +6,15 @@
         <title>hidden text</title>
     </head>
     <body>
-        <span id="more" onclick="showText()">(view more)</span>
+        <span id="more" onclick="showText()">
+            <a href="#">(view more)</a>
+        </span>
         <p id="text" style="display: none"> Phasellus tempus placerat dui, sagittis commodo urna aliquam in. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam dui elit, finibus quis consectetur ut, luctus in nisi. Suspendisse lacinia tincidunt lobortis. Aliquam id erat non tortor interdum sollicitudin in ut diam. Donec tempor, dolor ac gravida vestibulum, ligula dui mollis odio, sed rutrum urna nisl eu turpis. Integer sit amet augue dictum, sodales lacus non, condimentum sapien. Integer sollicitudin enim vitae tincidunt gravida. Duis convallis aliquet turpis, in pulvinar nulla aliquam ac. Integer vestibulum, turpis eu interdum rhoncus, lorem diam facilisis nulla, sed ornare ex ligula a nibh. Cras ullamcorper gravida eros, a condimentum ante dapibus vitae. Integer luctus iaculis aliquet. Nam aliquam faucibus augue, sed consectetur ex pellentesque vitae. Quisque eget diam id ipsum tincidunt vestibulum non a mi.</p>
 
         <script>
             function showText(){
-                let more = document.getElementById('more').style.display = 'none';
-                let text = document.getElementById('text').style.display = "inline";
+                document.getElementById('more').style.display = 'none';
+                document.getElementById('text').style.display = 'inline';
             }
         </script>
     </body>
